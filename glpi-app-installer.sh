@@ -1,11 +1,12 @@
 #!/bin/bash
 # ============================================
-# GLPI INSTALLATION - APLICACIONES (VM1)
+# GLPI INSTALLATION - WEB/APP (VM1)
 # ============================================
 # 
-# BASADO EXACTAMENTE EN LOS PASOS DE PRUEBA
+# EJECUTAR PRIMERO EL SCRIPT DE BD (VM2)
+# LUEGO ESTE SCRIPT EN LA VM1
 # 
-# INSTRUCCIONES EN EL TRABAJO:
+# INSTRUCCIONES:
 # 1. CAMBIAR los valores en la sección "===== CAMBIAR ====="
 # 2. Copiar este script a la VM1
 # 3. Ejecutar: chmod +x 02-install-web.sh && ./02-install-web.sh
@@ -20,10 +21,10 @@ set -e  # Detener si hay error
 # ============================================
 
 # IP del servidor de BASE DE DATOS (VM2) - poner la IP real en Proxmox
-DB_IP="IP_DEL_SERVIDOR_BD_AQUI"        # <--- CAMBIAR
+DB_IP="IP_DEL_SERVIDOR_BD_AQUI"               # <--- CAMBIAR
 
 # Zona horaria
-TIMEZONE="America/Caracas"              # <--- CAMBIAR si es necesario
+TIMEZONE="America/Caracas"                    # <--- CAMBIAR si es necesario
 
 # ============================================
 # ========== NO CAMBIAR ==========
@@ -45,7 +46,7 @@ log_warn() { echo -e "${YELLOW}[WARN]${NC} $1"; }
 
 echo ""
 echo "============================================"
-echo "  GLPI - INSTALACIÓN APLICACIONES (VM1)"
+echo "  GLPI - INSTALACIÓN WEB/APP (VM1)"
 echo "============================================"
 echo ""
 log_info "IP Base de Datos (VM2): ${DB_IP}"
