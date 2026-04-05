@@ -243,3 +243,5 @@ echo ""
 log_warn "DESPUÉS DE LA INSTALACIÓN WEB, elimina install.php:"
 echo "  rm /var/www/html/glpi/install/install.php"
 echo ""
+
+
