@@ -1,0 +1,1 @@
+# SCRIPT-glpi-debian-12
